@@ -13,7 +13,6 @@ Welcome to the source code for my personal portfolio website. This site serves a
 * **Framework:** React (via Vite)
 * **Styling:** Tailwind CSS
 * **Deployment:** GitHub Pages
-* **Icons:** Heroicons / SVG
 
 ## Featured Projects
 
