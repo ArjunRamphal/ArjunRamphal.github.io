@@ -39,5 +39,12 @@ export const projects = [
     tech: ["Kotlin", "Jetpack Compose"],
     githubLink: "https://github.com/ArjunRamphal/Bookly",
     image: bookly
+  },
+  {
+    title: "SA Bank Note Recognition System",
+    description: "An image processing system designed to recognize South African bank notes using dual structural and statistical strategies.",
+    tech: ["Python", "Computer Vision", "Image Processing"],
+    githubLink: "https://github.com/ArjunRamphal/COMP702Project",
+    image: bankNoteRecognition
   }
 ];
