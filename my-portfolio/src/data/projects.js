@@ -3,6 +3,7 @@ import dndTradingWebsite from '../images/dndwebsite.png';
 import visualNovelRoguelike from '../images/dungeon_descent.png';
 import notely from '../images/notely.png';
 import bookly from '../images/bookly.jpg';
+import bankNoteRecognition from '../images/bank_note.jpg';
 
 export const projects = [
 {
