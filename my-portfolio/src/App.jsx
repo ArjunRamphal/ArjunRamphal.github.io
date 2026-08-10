@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
 import ProjectCard from './components/ProjectCard';
+import Certifications from './components/Certifications';
 import { projects } from './data/projects';
 
 function App() {
@@ -11,11 +12,16 @@ function App() {
       {/* Hero Section (Intro & Avatar) */}
       <Hero /> 
       
-      {/* Skills Section (Languages & Tools) */}
-      <Skills />
+      {/* Skills & Certifications Section */}
+      <section className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <Skills />
+          <Certifications />
+        </div>
+      </section>
 
       {/* Main Content Area (Projects) */}
-      <main className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <main className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center md:text-left">
           Featured Projects
         </h2>

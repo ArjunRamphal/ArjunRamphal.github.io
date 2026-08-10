@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-slate-900/90"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+      <div className="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col md:flex-row items-center">
         
         {/* Text Section */}
         <div className="md:w-1/2 text-center md:text-left">
