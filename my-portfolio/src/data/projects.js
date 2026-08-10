@@ -50,7 +50,7 @@ export const projects = [
     tech: ["Python", "Computer Vision", "Image Processing"],
     githubLink: "https://github.com/ArjunRamphal/COMP702Project",
     image: bankNoteRecognition
-  }
+  },
   {
     title: "Cloud Security Ontology",
     description: "A formal knowledge model establishing a shared semantic vocabulary for automated reasoning engines.",
