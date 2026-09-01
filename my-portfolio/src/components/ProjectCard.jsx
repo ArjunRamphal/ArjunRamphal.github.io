@@ -39,7 +39,8 @@ export default function ProjectCard({ project }) {
           href={project.githubLink} 
           target="_blank" 
           rel="noopener noreferrer"
-          className="mt-auto inline-block w-full text-center bg-gray-900 text-white py-2 rounded-lg hover:bg-gray-700 transition-colors"
+          aria-label={`View code for ${project.title} (opens in a new tab)`}
+          className="mt-auto inline-block w-full text-center bg-gray-900 text-white py-2 rounded-lg hover:bg-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2 transition-colors"
         >
           View Code &rarr;
         </a>

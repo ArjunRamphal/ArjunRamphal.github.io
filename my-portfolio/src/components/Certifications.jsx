@@ -58,7 +58,8 @@ export default function Certifications() {
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-auto text-sm font-bold text-slate-700 hover:text-blue-600 transition-colors"
+                aria-label={`View details for ${cert.title} (opens in a new tab)`}
+                className="inline-block mt-auto text-sm font-bold text-slate-700 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded transition-colors"
               >
                 View Details &rarr;
               </a>
