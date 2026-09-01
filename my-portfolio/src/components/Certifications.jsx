@@ -39,6 +39,7 @@ export default function Certifications() {
               <img 
                 src={cert.image} 
                 alt={cert.title} 
+                loading="lazy"
                 className="w-full h-full object-contain"
               />
             </div>
