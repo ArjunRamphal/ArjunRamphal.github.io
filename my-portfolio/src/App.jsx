@@ -7,8 +7,16 @@ import { projects } from './data/projects';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 relative">
       
+      {/* Skip to Main Content Link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 px-4 py-2 bg-slate-900 text-white font-bold rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 transition-transform"
+      >
+        Skip to main content
+      </a>
+
       {/* Hero Section (Intro & Avatar) */}
       <Hero /> 
       
@@ -21,7 +29,7 @@ function App() {
       </section>
 
       {/* Main Content Area (Projects) */}
-      <main className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12">
+      <main id="main-content" className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12 scroll-mt-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center md:text-left">
           Featured Projects
         </h2>
