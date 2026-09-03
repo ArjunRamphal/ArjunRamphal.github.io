@@ -10,7 +10,8 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <img 
           src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
-          alt="Background" 
+          alt=""
+          aria-hidden="true"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-slate-900/90"></div>
