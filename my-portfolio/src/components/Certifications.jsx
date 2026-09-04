@@ -38,7 +38,8 @@ export default function Certifications() {
             <div className="w-24 h-24 sm:w-28 sm:h-28 shrink-0">
               <img 
                 src={cert.image} 
-                alt={cert.title} 
+                alt=""
+                aria-hidden="true"
                 loading="lazy"
                 className="w-full h-full object-contain"
               />
