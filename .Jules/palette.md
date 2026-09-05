@@ -7,3 +7,6 @@
 ## 2025-03-03 - Decorative Image Accessibility
 **Learning:** Screen readers announce images by default if they have an `alt` attribute. However, purely decorative background images (like large hero backgrounds) create unnecessary audio clutter and can distract from the main content. Simply providing an empty `alt=""` is sometimes insufficient depending on the context and screen reader.
 **Action:** When adding images that are strictly decorative and add no semantic value, explicitly include `alt=""` and `aria-hidden="true"` to ensure they are completely removed from the accessibility tree.
+## 2025-03-04 - Redundant Alt Text in Cards
+**Learning:** In card components where an image is immediately followed by a heading containing the same text (e.g., `alt={project.title}` followed by `<h3>{project.title}</h3>`), screen readers announce the title twice. This creates unnecessary audio clutter and degrades the user experience.
+**Action:** Treat these images as purely decorative. Use `alt=""` and `aria-hidden="true"` to remove them from the accessibility tree, relying on the adjacent text for semantics. When testing these components with RTL, remember to use DOM queries (e.g., `querySelector('img[src="..."]')`) instead of `getByAltText` or `getByRole`.
