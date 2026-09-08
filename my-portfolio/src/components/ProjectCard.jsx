@@ -8,7 +8,8 @@ export default function ProjectCard({ project }) {
       <div className="h-48 overflow-hidden shrink-0">
         <img 
           src={project.image} 
-          alt={project.title} 
+          alt=""
+          aria-hidden="true"
           loading="lazy"
           className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
         />
