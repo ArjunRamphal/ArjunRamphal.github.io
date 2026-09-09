@@ -7,3 +7,7 @@
 ## 2025-03-03 - Decorative Image Accessibility
 **Learning:** Screen readers announce images by default if they have an `alt` attribute. However, purely decorative background images (like large hero backgrounds) create unnecessary audio clutter and can distract from the main content. Simply providing an empty `alt=""` is sometimes insufficient depending on the context and screen reader.
 **Action:** When adding images that are strictly decorative and add no semantic value, explicitly include `alt=""` and `aria-hidden="true"` to ensure they are completely removed from the accessibility tree.
+
+## 2026-09-09 - Redundant Screen Reader Noise from Decorative Images Next to Text
+**Learning:** When an image immediately precedes a heading or text element that contains the exact same information (e.g., a project logo followed by the project title text), providing normal alt text causes screen readers to read the same text twice in a row, resulting in redundant noise.
+**Action:** For images whose literal content is already present in the immediate adjacent text, they should be treated as decorative. Explicitly use `alt=""` and `aria-hidden="true"` to remove them from the accessibility tree, and note that they must be tested with DOM selectors rather than accessibility queries (like `getByRole`).
