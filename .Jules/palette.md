@@ -7,3 +7,6 @@
 ## 2025-03-03 - Decorative Image Accessibility
 **Learning:** Screen readers announce images by default if they have an `alt` attribute. However, purely decorative background images (like large hero backgrounds) create unnecessary audio clutter and can distract from the main content. Simply providing an empty `alt=""` is sometimes insufficient depending on the context and screen reader.
 **Action:** When adding images that are strictly decorative and add no semantic value, explicitly include `alt=""` and `aria-hidden="true"` to ensure they are completely removed from the accessibility tree.
+## 2024-09-10 - Decorative Images and Testing Library
+**Learning:** When adding `aria-hidden="true"` to images to make them decorative and improve accessibility (reducing screen reader noise), they are removed from the accessibility tree. As a result, React Testing Library queries like `getByAltText` or `getByRole` will no longer find them.
+**Action:** When testing purely decorative images that have `aria-hidden="true"`, use DOM queries like `container.querySelector('img[src="..."]')` instead of accessibility-based queries to verify the element is present and has the correct attributes.
