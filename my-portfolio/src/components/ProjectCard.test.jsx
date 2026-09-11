@@ -27,13 +27,13 @@ describe('ProjectCard', () => {
     expect(screen.getByText('Vitest')).toBeInTheDocument();
   });
 
-  it('renders the project image with correct src and alt attributes', () => {
-    render(<ProjectCard project={mockProject} />);
+  it('renders the project image with correct attributes for accessibility', () => {
+    const { container } = render(<ProjectCard project={mockProject} />);
 
-    const image = screen.getByRole('img', { name: 'Test Project' });
+    const image = container.querySelector('img[src="test-image.jpg"]');
     expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute('src', 'test-image.jpg');
-    expect(image).toHaveAttribute('alt', 'Test Project');
+    expect(image).toHaveAttribute('alt', '');
+    expect(image).toHaveAttribute('aria-hidden', 'true');
   });
 
   it('renders the GitHub link with correct href and aria-label', () => {
