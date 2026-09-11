@@ -15,7 +15,7 @@ describe('Certifications Component', () => {
   });
 
   it('renders ISC2 certification details correctly', () => {
-    render(<Certifications />);
+    const { container } = render(<Certifications />);
 
     // Check title
     expect(screen.getByText('ISC2 Certified in Cybersecurity (CC)')).toBeInTheDocument();
@@ -26,10 +26,11 @@ describe('Certifications Component', () => {
     // Check description
     expect(screen.getByText('Validates foundational knowledge of cybersecurity principles, access controls, network security, and security operations.')).toBeInTheDocument();
 
-    // Check image
-    const image = screen.getByAltText('ISC2 Certified in Cybersecurity (CC)');
+    // Check image attributes for accessibility
+    const image = container.querySelector('img[src="mock-isc2-image.png"]');
     expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute('src', 'mock-isc2-image.png');
+    expect(image).toHaveAttribute('alt', '');
+    expect(image).toHaveAttribute('aria-hidden', 'true');
 
     // Check link
     const link = screen.getByRole('link', { name: /View details for ISC2 Certified in Cybersecurity \(CC\) \(opens in a new tab\)/i });
@@ -40,7 +41,7 @@ describe('Certifications Component', () => {
   });
 
   it('renders Azure certification details correctly', () => {
-    render(<Certifications />);
+    const { container } = render(<Certifications />);
 
     // Check title
     expect(screen.getByText('Microsoft Certified: Azure Fundamentals (AZ-900)')).toBeInTheDocument();
@@ -51,10 +52,11 @@ describe('Certifications Component', () => {
     // Check description
     expect(screen.getByText('Demonstrates foundational knowledge of cloud concepts, core Azure services, plus Azure management and governance.')).toBeInTheDocument();
 
-    // Check image
-    const image = screen.getByAltText('Microsoft Certified: Azure Fundamentals (AZ-900)');
+    // Check image attributes for accessibility
+    const image = container.querySelector('img[src="mock-az900-image.png"]');
     expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute('src', 'mock-az900-image.png');
+    expect(image).toHaveAttribute('alt', '');
+    expect(image).toHaveAttribute('aria-hidden', 'true');
 
     // Check link
     const link = screen.getByRole('link', { name: /View details for Microsoft Certified: Azure Fundamentals \(AZ-900\) \(opens in a new tab\)/i });
