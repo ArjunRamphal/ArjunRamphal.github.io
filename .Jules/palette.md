@@ -7,3 +7,7 @@
 ## 2025-03-03 - Decorative Image Accessibility
 **Learning:** Screen readers announce images by default if they have an `alt` attribute. However, purely decorative background images (like large hero backgrounds) create unnecessary audio clutter and can distract from the main content. Simply providing an empty `alt=""` is sometimes insufficient depending on the context and screen reader.
 **Action:** When adding images that are strictly decorative and add no semantic value, explicitly include `alt=""` and `aria-hidden="true"` to ensure they are completely removed from the accessibility tree.
+
+## 2026-09-17 - Companion Image Accessibility
+**Learning:** Images that appear immediately adjacent to explicit text titles (like in project cards or certification lists) are often redundant for screen reader users and add audio clutter if they have `alt` text.
+**Action:** Treat such companion images as purely decorative by adding `alt=""` and `aria-hidden="true"` to remove them from the accessibility tree. When testing these elements with React Testing Library, test their attributes using DOM queries like `document.querySelector('img[src="..."]')` instead of accessibility-based queries like `getByAltText` or `getByRole`, as they are explicitly hidden from the accessibility tree.
