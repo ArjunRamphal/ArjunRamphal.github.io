@@ -1,0 +1,3 @@
+## 2024-05-18 - Decorative Images in Cards
+**Learning:** Images inside cards that are accompanied by a descriptive heading (e.g., project titles or certification names) can create redundant screen reader noise if given descriptive `alt` text. Making them decorative is a better UX for screen reader users.
+**Action:** When a card image does not provide additional context beyond what is already in the card's text, use `alt=""` and `aria-hidden="true"` on the `img` element to remove it from the accessibility tree.
