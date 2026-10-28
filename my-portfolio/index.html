@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Establish early connection to Unsplash for LCP image -->
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <!-- Preload LCP background image to bypass JS execution delay -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop" fetchpriority="high" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arjun Ramphal | Portfolio</title>
