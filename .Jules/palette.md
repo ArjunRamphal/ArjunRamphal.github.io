@@ -7,3 +7,6 @@
 ## 2025-03-03 - Decorative Image Accessibility
 **Learning:** Screen readers announce images by default if they have an `alt` attribute. However, purely decorative background images (like large hero backgrounds) create unnecessary audio clutter and can distract from the main content. Simply providing an empty `alt=""` is sometimes insufficient depending on the context and screen reader.
 **Action:** When adding images that are strictly decorative and add no semantic value, explicitly include `alt=""` and `aria-hidden="true"` to ensure they are completely removed from the accessibility tree.
+## 2026-10-28 - Redundant Companion Images
+**Learning:** Companion images that are immediately adjacent to explicitly stated titles (like an avatar next to a name heading) should be treated as purely decorative to avoid redundant screen reader audio clutter.
+**Action:** Explicitly set `alt=""` and `aria-hidden="true"` on these images to completely remove them from the accessibility tree.

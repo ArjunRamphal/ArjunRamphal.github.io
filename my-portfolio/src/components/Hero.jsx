@@ -73,7 +73,8 @@ export default function Hero() {
             
             <img 
               src={profilePic}
-              alt="Arjun Ramphal" 
+              alt=""
+              aria-hidden="true"
               className="relative w-full h-full rounded-full border-4 border-slate-700 shadow-2xl object-cover bg-slate-800"
             />
           </div>

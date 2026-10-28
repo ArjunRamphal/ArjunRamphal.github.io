@@ -23,4 +23,14 @@ describe('Hero Component', () => {
     expect(linkedinLink).toBeInTheDocument();
     expect(linkedinLink).toHaveAttribute('href', 'https://www.linkedin.com/in/arjunramphal');
   });
+
+  it('treats all images as purely decorative', () => {
+    const { container } = render(<Hero />);
+    const images = container.querySelectorAll('img');
+    expect(images.length).toBeGreaterThan(0);
+    images.forEach(img => {
+      expect(img).toHaveAttribute('alt', '');
+      expect(img).toHaveAttribute('aria-hidden', 'true');
+    });
+  });
 });
