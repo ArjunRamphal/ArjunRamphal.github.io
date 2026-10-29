@@ -8,10 +8,12 @@ export default function Hero() {
     >
       {/* The Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
+        {/* Fetch priority high for LCP background image */}
         <img 
           src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
           alt=""
           aria-hidden="true"
+          fetchPriority="high"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-slate-900/90"></div>
@@ -71,9 +73,11 @@ export default function Hero() {
           <div className="relative w-64 h-64 md:w-80 md:h-80">
             <div className="absolute inset-0 bg-blue-600 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob"></div>
             
+            {/* Fetch priority high for above-the-fold profile picture */}
             <img 
               src={profilePic}
               alt="Arjun Ramphal" 
+              fetchPriority="high"
               className="relative w-full h-full rounded-full border-4 border-slate-700 shadow-2xl object-cover bg-slate-800"
             />
           </div>
