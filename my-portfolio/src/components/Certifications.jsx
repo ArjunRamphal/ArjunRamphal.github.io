@@ -3,24 +3,25 @@ import React from 'react';
 import isc2Badge from '../images/isc2-cc.png';
 import az900Badge from '../images/az-900.png';
 
-export default function Certifications() {
-  const certifications = [
-    {
-      title: "ISC2 Certified in Cybersecurity (CC)",
-      issuer: "ISC2",
-      description: "Validates foundational knowledge of cybersecurity principles, access controls, network security, and security operations.",
-      image: isc2Badge,
-      link: "https://www.credly.com/badges/56fbf132-f640-4076-9590-49a42ded89ce/public_url"
-    },
-    {
-      title: "Microsoft Certified: Azure Fundamentals (AZ-900)",
-      issuer: "Microsoft",
-      description: "Demonstrates foundational knowledge of cloud concepts, core Azure services, plus Azure management and governance.",
-      image: az900Badge,
-      link: "https://learn.microsoft.com/api/credentials/share/en-us/ArjunRamphal-9610/98EF909F74A30238?sharingId=CA5C0B1FFA1B90"
-    }
-  ];
+// Moved static array outside component to prevent recreation on re-renders
+const certifications = [
+  {
+    title: "ISC2 Certified in Cybersecurity (CC)",
+    issuer: "ISC2",
+    description: "Validates foundational knowledge of cybersecurity principles, access controls, network security, and security operations.",
+    image: isc2Badge,
+    link: "https://www.credly.com/badges/56fbf132-f640-4076-9590-49a42ded89ce/public_url"
+  },
+  {
+    title: "Microsoft Certified: Azure Fundamentals (AZ-900)",
+    issuer: "Microsoft",
+    description: "Demonstrates foundational knowledge of cloud concepts, core Azure services, plus Azure management and governance.",
+    image: az900Badge,
+    link: "https://learn.microsoft.com/api/credentials/share/en-us/ArjunRamphal-9610/98EF909F74A30238?sharingId=CA5C0B1FFA1B90"
+  }
+];
 
+export default function Certifications() {
   return (
     <div>
       {/* Font updated to perfectly match Skills, and underline removed */}

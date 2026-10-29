@@ -1,0 +1,1 @@
+## 2026-10-29 - Component Memory Optimizations\n**Learning:** Static arrays/objects created inside a React component render function are reallocated on every single render.\n**Action:** Move static data objects like the certifications array outside of the component body to prevent unnecessary memory allocations during re-renders.
