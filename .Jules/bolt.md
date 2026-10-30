@@ -1,0 +1,3 @@
+## 2023-10-30 - [Lazy Loading Large Static Asset Arrays]
+**Learning:** In a single-page React app serving as a portfolio, loading all major asset-heavy components upfront—such as an array of 9 project objects, each containing high-res images—results in inflated initial bundle sizes and prolonged Initial Load times.
+**Action:** Extract the static, image-heavy block of content (like a mapped array of project cards) into its own component and utilize React's `lazy` and `Suspense`. This code-splits the application, loading the lighter initial page structure immediately and deferring the heavier components to load asynchronously, optimizing the initial bundle size without needing a complex state management system.
