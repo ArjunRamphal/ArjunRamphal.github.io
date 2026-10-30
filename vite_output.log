@@ -1,0 +1,10 @@
+
+> my-portfolio@0.0.0 dev /app/my-portfolio
+> vite
+
+
+  VITE v8.2.2  ready in 361 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+ ELIFECYCLE  Command failed with exit code 143.
