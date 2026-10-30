@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://images.unsplash.com data:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; connect-src 'self';" />
     <!-- Establish early connection to Unsplash for LCP image -->
     <link rel="preconnect" href="https://images.unsplash.com" />
     <!-- Preload LCP background image to bypass JS execution delay -->
