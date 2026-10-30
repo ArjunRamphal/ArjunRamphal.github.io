@@ -32,7 +32,7 @@ export default function Certifications() {
         {certifications.map((cert, index) => (
           <div 
             key={index} 
-            className="bg-white border border-gray-100 rounded-xl shadow-sm p-6 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:shadow-md transition-shadow"
+            className="group bg-white border border-gray-100 rounded-xl shadow-sm p-6 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:shadow-md focus-within:shadow-md transition-shadow"
           >
             {/* Badge Image */}
             <div className="w-24 h-24 sm:w-28 sm:h-28 shrink-0">
