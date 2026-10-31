@@ -6,11 +6,13 @@ export default function ProjectCard({ project }) {
       
       {/* Image Section */}
       <div className="h-48 overflow-hidden shrink-0">
+        {/* Added decoding="async" alongside lazy loading to prevent main-thread blocking when images enter the viewport (reduces scroll jank). */}
         <img 
           src={project.image} 
           alt=""
           aria-hidden="true"
           loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
         />
       </div>
