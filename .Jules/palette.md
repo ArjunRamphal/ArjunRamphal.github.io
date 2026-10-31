@@ -7,3 +7,6 @@
 ## 2025-03-03 - Decorative Image Accessibility
 **Learning:** Screen readers announce images by default if they have an `alt` attribute. However, purely decorative background images (like large hero backgrounds) create unnecessary audio clutter and can distract from the main content. Simply providing an empty `alt=""` is sometimes insufficient depending on the context and screen reader.
 **Action:** When adding images that are strictly decorative and add no semantic value, explicitly include `alt=""` and `aria-hidden="true"` to ensure they are completely removed from the accessibility tree.
+## 2024-05-18 - [Consistent Card Hover Effects]
+**Learning:** Applying `hover:*` states individually to elements inside a card breaks the experience for keyboard users who focus internal links, creating a disconnected interaction. Using `group-hover:*` and `group-focus-within:*` ensures a unified, cohesive visual feedback across all interaction methods.
+**Action:** When adding hover states to card containers with internal focusable elements, always define a `group` on the parent and combine `group-hover` and `group-focus-within` on children.
