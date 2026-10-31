@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ProjectCard({ project }) {
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full">
+    <div className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl focus-within:shadow-2xl transition-shadow duration-300 flex flex-col h-full">
       
       {/* Image Section */}
       <div className="h-48 overflow-hidden shrink-0">
@@ -11,7 +11,7 @@ export default function ProjectCard({ project }) {
           alt=""
           aria-hidden="true"
           loading="lazy"
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-cover group-hover:scale-105 group-focus-within:scale-105 transition-transform duration-500"
         />
       </div>
 
