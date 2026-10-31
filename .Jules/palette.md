@@ -7,3 +7,6 @@
 ## 2025-03-03 - Decorative Image Accessibility
 **Learning:** Screen readers announce images by default if they have an `alt` attribute. However, purely decorative background images (like large hero backgrounds) create unnecessary audio clutter and can distract from the main content. Simply providing an empty `alt=""` is sometimes insufficient depending on the context and screen reader.
 **Action:** When adding images that are strictly decorative and add no semantic value, explicitly include `alt=""` and `aria-hidden="true"` to ensure they are completely removed from the accessibility tree.
+## 2025-03-04 - Focus and Hover Parity for Card Components
+**Learning:** Keyboard users focusing on interactive elements inside a card component miss out on the visual cues (like box shadows or image scaling) that mouse users experience when hovering over the entire card.
+**Action:** When adding hover effects to card components, use Tailwind's `group` on the parent container and pair `group-hover:*` with `group-focus-within:*` on child elements (and `focus-within:*` on the parent). This ensures that keyboard users focusing on internal links receive the same cohesive visual feedback as mouse users hovering over the card.
