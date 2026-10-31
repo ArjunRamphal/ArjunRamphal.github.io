@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
-import ProjectCard from './components/ProjectCard';
 import Certifications from './components/Certifications';
-import { projects } from './data/projects';
+
+// Lazy load the projects section to reduce initial bundle size
+const Projects = lazy(() => import('./components/Projects'));
 
 function App() {
   return (
@@ -34,12 +35,10 @@ function App() {
           Featured Projects
         </h2>
         
-        {/* Grid of Projects */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
-        </div>
+        {/* Grid of Projects (Code Split) */}
+        <Suspense fallback={<div className="h-64 flex items-center justify-center text-gray-500">Loading projects...</div>}>
+          <Projects />
+        </Suspense>
       </main>
 
       {/* Footer */}
