@@ -6,11 +6,13 @@ export default function ProjectCard({ project }) {
       
       {/* Image Section */}
       <div className="h-48 overflow-hidden shrink-0">
+        {/* Bolt: Added decoding="async" alongside loading="lazy" to offload image decoding to a background thread, preventing main-thread blocking and scroll jank. */}
         <img 
           src={project.image} 
           alt=""
           aria-hidden="true"
           loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover group-hover:scale-105 group-focus-within:scale-105 transition-transform duration-500"
         />
       </div>

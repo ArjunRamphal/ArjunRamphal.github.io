@@ -36,11 +36,13 @@ export default function Certifications() {
           >
             {/* Badge Image */}
             <div className="w-24 h-24 sm:w-28 sm:h-28 shrink-0">
+              {/* Bolt: Added decoding="async" alongside loading="lazy" to offload image decoding to a background thread, preventing main-thread blocking and scroll jank. */}
               <img 
                 src={cert.image} 
                 alt=""
                 aria-hidden="true"
                 loading="lazy"
+                decoding="async"
                 className="w-full h-full object-contain"
               />
             </div>
