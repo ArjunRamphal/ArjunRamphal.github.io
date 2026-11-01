@@ -76,7 +76,8 @@ export default function Hero() {
             {/* Fetch priority high for above-the-fold profile picture */}
             <img 
               src={profilePic}
-              alt="Arjun Ramphal" 
+              alt=""
+              aria-hidden="true"
               fetchPriority="high"
               className="relative w-full h-full rounded-full border-4 border-slate-700 shadow-2xl object-cover bg-slate-800"
             />

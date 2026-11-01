@@ -10,3 +10,6 @@
 ## 2025-03-04 - Focus and Hover Parity for Card Components
 **Learning:** Keyboard users focusing on interactive elements inside a card component miss out on the visual cues (like box shadows or image scaling) that mouse users experience when hovering over the entire card.
 **Action:** When adding hover effects to card components, use Tailwind's `group` on the parent container and pair `group-hover:*` with `group-focus-within:*` on child elements (and `focus-within:*` on the parent). This ensures that keyboard users focusing on internal links receive the same cohesive visual feedback as mouse users hovering over the card.
+## 2026-11-01 - Redundant Image Accessibility
+**Learning:** Screen reader users encounter a poor experience when decorative images are immediately adjacent to textual descriptions (such as a profile picture next to a heading with the person's name) as the image's `alt` text causes redundant audio clutter.
+**Action:** When working with companion images next to explicit textual context, explicitly use `alt=""` and `aria-hidden="true"` to ensure they are removed from the accessibility tree, thereby streamlining the screen reader output.
