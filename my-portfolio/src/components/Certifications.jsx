@@ -43,7 +43,7 @@ export default function Certifications() {
                 aria-hidden="true"
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain group-hover:scale-105 group-focus-within:scale-105 transition-transform duration-500"
               />
             </div>
 
