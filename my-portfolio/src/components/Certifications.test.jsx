@@ -70,7 +70,10 @@ describe('Certifications Component', () => {
 
   it('renders the correct number of certifications', () => {
     render(<Certifications />);
-    const links = screen.getAllByText('View Details →');
+    // The text 'View Details →' is split across the text node and a span element.
+    const links = screen.getAllByText((content, element) => {
+      return element.tagName.toLowerCase() === 'a' && element.textContent === 'View Details →';
+    });
     expect(links).toHaveLength(2);
   });
 });

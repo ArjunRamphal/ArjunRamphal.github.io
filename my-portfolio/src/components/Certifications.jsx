@@ -64,9 +64,9 @@ export default function Certifications() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`View details for ${cert.title} (opens in a new tab)`}
-                className="inline-block mt-auto text-sm font-bold text-slate-700 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded transition-colors"
+                className="group/link inline-block mt-auto text-sm font-bold text-slate-700 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded transition-colors"
               >
-                View Details &rarr;
+                View Details <span className="inline-block transition-transform duration-200 group-hover/link:translate-x-1 group-focus-visible/link:translate-x-1" aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </div>
