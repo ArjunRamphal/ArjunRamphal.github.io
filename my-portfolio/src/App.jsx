@@ -30,7 +30,7 @@ function App() {
       </section>
 
       {/* Main Content Area (Projects) */}
-      <main id="main-content" className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12 scroll-mt-8">
+      <main id="main-content" tabIndex={-1} className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12 scroll-mt-8 outline-none">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center md:text-left">
           Featured Projects
         </h2>
