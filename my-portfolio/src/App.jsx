@@ -8,7 +8,7 @@ const Projects = lazy(() => import('./components/Projects'));
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50 relative">
+    <div className="min-h-screen bg-gray-50 relative selection:bg-blue-200 selection:text-blue-900">
       
       {/* Skip to Main Content Link */}
       <a

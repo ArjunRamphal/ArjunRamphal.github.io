@@ -4,3 +4,6 @@
 ## 2024-11-05 - Skip to Content link focus transfer
 **Learning:** Skip to content links that simply use an anchor `href` to point to an `id` scroll the page, but screen readers and keyboard users need the actual focus to be moved to the target element. Non-interactive elements like `<main>` cannot naturally receive focus.
 **Action:** Always add `tabIndex={-1}` and `className="outline-none"` (or equivalent) to the target container of a skip link (e.g., `<main id="main-content" tabIndex={-1} className="... outline-none">`). This allows the container to receive programmatic focus from the link without breaking the normal tab order or showing an ugly focus ring when clicked.
+## 2025-02-23 - [Smooth Scrolling for Skip Links]
+**Learning:** Adding smooth scrolling helps sighted keyboard users maintain their mental model of the page structure when using skip links, rather than being disoriented by an abrupt jump.
+**Action:** Always pair `scroll-smooth` on the `html` element with skip-to-content links.
