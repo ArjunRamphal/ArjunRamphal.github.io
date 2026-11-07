@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-export default function ProjectCard({ project }) {
+// Bolt: Added React.memo() to prevent unnecessary re-renders of list items.
+// Since ProjectCard receives a stable project object, this avoids rendering all cards if the parent updates.
+const ProjectCard = memo(function ProjectCard({ project }) {
   return (
     <div className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl focus-within:shadow-2xl transition-shadow duration-300 flex flex-col h-full">
       
@@ -51,4 +53,6 @@ export default function ProjectCard({ project }) {
       </div>
     </div>
   );
-}
+});
+
+export default ProjectCard;
