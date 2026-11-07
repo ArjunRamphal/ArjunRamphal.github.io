@@ -27,16 +27,16 @@ export default function ProjectCard({ project }) {
         </p>
 
         {/* Tech Stack Tags */}
-        <div className="flex flex-wrap gap-2 mb-6">
+        <ul aria-label="Technologies used" className="flex flex-wrap gap-2 mb-6">
           {project.tech.map((tech) => (
-            <span 
+            <li
               key={tech} 
-              className="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-md"
+              className="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-md hover:bg-blue-200 transition-colors cursor-default"
             >
               {tech}
-            </span>
+            </li>
           ))}
-        </div>
+        </ul>
 
         {/* Button */}
         <a 
