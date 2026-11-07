@@ -7,3 +7,8 @@
 **Vulnerability:** Even with a baseline CSP, legacy features can introduce risks like base tag hijacking, plugin-based XSS, and unauthorized form submissions.
 **Learning:** Adding explicit restrictions for features not used by the application, such as `base-uri 'self'`, `object-src 'none'`, and `form-action 'none'`, provides a stronger defense-in-depth posture. These directives restrict where base URLs can point, disallow plugins (like Flash/Java), and prevent form submissions to arbitrary endpoints.
 **Prevention:** Always consider adding these strict directives to a CSP when the application's architecture permits it, especially for modern, static single-page applications.
+
+## 2024-11-07 - [Harden CSP with upgrade-insecure-requests]
+**Vulnerability:** Even when using HTTPS, there's a risk of man-in-the-middle (MitM) attacks or mixed content issues if HTTP resources are inadvertently referenced or if a user accesses the site over HTTP initially.
+**Learning:** Adding the `upgrade-insecure-requests` directive to the CSP instructs the browser to treat all of the site's insecure URLs (those served over HTTP) as if they have been replaced with secure URLs (those served over HTTPS). This ensures that all requests are encrypted and helps prevent active network attackers from downgrading connections.
+**Prevention:** Always include `upgrade-insecure-requests` in the Content Security Policy to enforce secure connections for all resources and mitigate mixed content vulnerabilities.
