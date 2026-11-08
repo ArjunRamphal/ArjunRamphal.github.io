@@ -7,3 +7,6 @@
 ## 2026-11-06 - Semantic Lists for Visual Tags
 **Learning:** Visual tag collections (like skill pills or tech stacks) implemented as divs and spans lack semantic meaning for screen readers, making them harder to understand and navigate.
 **Action:** Always use semantic `ul` and `li` tags wrapped with a descriptive `aria-label` for tag collections to provide proper context and structure for assistive technologies.
+## 2026-11-08 - Accessible Smooth Scrolling
+**Learning:** Adding smooth scrolling (e.g., `scroll-smooth`) can cause issues for users with vestibular disorders if their reduced motion preferences are not respected.
+**Action:** When adding smooth scrolling utility classes in Tailwind, always prefix them with `motion-safe:` (e.g., `motion-safe:scroll-smooth`) to ensure it is only applied for users without reduced motion preferences.
