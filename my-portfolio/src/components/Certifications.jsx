@@ -1,9 +1,8 @@
 // src/components/Certifications.jsx
-import React from 'react';
+import React, { memo } from 'react';
 import isc2Badge from '../images/isc2-cc.png';
 import az900Badge from '../images/az-900.png';
 
-// Bolt: Moved static certifications array outside the component to prevent it from being recreated on every render.
 const certifications = [
   {
     title: "ISC2 Certified in Cybersecurity (CC)",
@@ -21,7 +20,8 @@ const certifications = [
   }
 ];
 
-export default function Certifications() {
+// Bolt: Wrapped in React.memo() to prevent unnecessary re-renders when parent component updates
+const Certifications = memo(function Certifications() {
   return (
     <div>
       {/* Font updated to perfectly match Skills, and underline removed */}
@@ -74,4 +74,6 @@ export default function Certifications() {
       </div>
     </div>
   );
-}
+});
+
+export default Certifications;

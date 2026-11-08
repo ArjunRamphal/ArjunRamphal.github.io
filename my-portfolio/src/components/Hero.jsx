@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 import profilePic from '../images/1727090543636.jpg';
 
-export default function Hero() {
+// Bolt: Wrapped in React.memo() to prevent unnecessary re-renders when parent component updates
+const Hero = memo(function Hero() {
   return (
     <section 
       className="relative text-white py-20"
@@ -86,4 +87,6 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+});
+
+export default Hero;
