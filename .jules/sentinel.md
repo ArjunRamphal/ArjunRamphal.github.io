@@ -12,3 +12,8 @@
 **Vulnerability:** Even when using HTTPS, there's a risk of man-in-the-middle (MitM) attacks or mixed content issues if HTTP resources are inadvertently referenced or if a user accesses the site over HTTP initially.
 **Learning:** Adding the `upgrade-insecure-requests` directive to the CSP instructs the browser to treat all of the site's insecure URLs (those served over HTTP) as if they have been replaced with secure URLs (those served over HTTPS). This ensures that all requests are encrypted and helps prevent active network attackers from downgrading connections.
 **Prevention:** Always include `upgrade-insecure-requests` in the Content Security Policy to enforce secure connections for all resources and mitigate mixed content vulnerabilities.
+
+## 2024-11-08 - [Referrer-Policy added]
+**Vulnerability:** Missing Referrer-Policy allowing the potential leakage of sensitive path information (like query parameters or session IDs in the URL) to external domains when users click external links.
+**Learning:** Adding the `<meta name="referrer" content="strict-origin-when-cross-origin" />` directive ensures that when navigating to external domains over HTTPS, only the origin (domain) is sent as the referrer, not the full path, preserving privacy and security.
+**Prevention:** Always include a strong Referrer-Policy in the application to prevent data leakage via the Referer header to external, potentially untrusted sites.

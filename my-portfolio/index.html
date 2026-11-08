@@ -12,6 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Sentinel: Hardened CSP with base-uri, object-src, and form-action to mitigate injection risks, and upgrade-insecure-requests -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://images.unsplash.com; connect-src 'self' ws:; base-uri 'self'; object-src 'none'; form-action 'none'; upgrade-insecure-requests;" />
+    <!-- Sentinel: Referrer-Policy to prevent leaking sensitive paths to external domains -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>Arjun Ramphal | Portfolio</title>
   </head>
   <body>
