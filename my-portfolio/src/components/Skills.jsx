@@ -1,5 +1,5 @@
 // src/components/Skills.jsx
-import React from 'react';
+import React, { memo } from 'react';
 
 const skills = [
   {
@@ -16,7 +16,8 @@ const skills = [
   }
 ];
 
-export default function Skills() {
+// Bolt: Wrapped in React.memo() to prevent unnecessary re-renders when parent component updates
+const Skills = memo(function Skills() {
   return (
     <div>
       {/* Font updated to match */}
@@ -45,4 +46,6 @@ export default function Skills() {
       </div>
     </div>
   );
-}
+});
+
+export default Skills;
