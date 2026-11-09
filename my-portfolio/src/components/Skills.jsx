@@ -35,7 +35,7 @@ const Skills = memo(function Skills() {
               {skillGroup.items.map((item) => (
                 <li
                   key={item} 
-                  className="px-3 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors cursor-default"
+                  className="px-3 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-full text-sm font-medium cursor-default"
                 >
                   {item}
                 </li>

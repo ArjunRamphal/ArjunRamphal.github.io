@@ -33,7 +33,7 @@ const ProjectCard = memo(function ProjectCard({ project }) {
           {project.tech.map((tech) => (
             <li
               key={tech} 
-              className="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-md hover:bg-blue-200 transition-colors cursor-default"
+              className="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-md cursor-default"
             >
               {tech}
             </li>

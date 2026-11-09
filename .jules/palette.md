@@ -10,3 +10,6 @@
 ## 2026-11-08 - Accessible Smooth Scrolling
 **Learning:** Adding smooth scrolling (e.g., `scroll-smooth`) can cause issues for users with vestibular disorders if their reduced motion preferences are not respected.
 **Action:** When adding smooth scrolling utility classes in Tailwind, always prefix them with `motion-safe:` (e.g., `motion-safe:scroll-smooth`) to ensure it is only applied for users without reduced motion preferences.
+## 2024-11-09 - Remove Hover Effects on Static Tags
+**Learning:** Adding hover classes (like `hover:bg-gray-100`) to static, non-interactive elements (like technology tags) creates a "false affordance." Users expect these elements to be clickable links or buttons because they react to the mouse, leading to confusion when clicking does nothing.
+**Action:** Always ensure that hover and focus styles are exclusively reserved for genuinely interactive elements (links, buttons, inputs) to maintain clear interactive affordances.
