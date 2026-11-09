@@ -1,0 +1,3 @@
+## 2024-11-09 - Hardware Acceleration for Expensive Continuous Animations
+**Learning:** Animating elements with computationally expensive CSS properties (like `mix-blend-multiply` and `filter blur-*`) causes significant browser repaints and high CPU/GPU usage on every single frame, potentially leading to jank on low-end devices.
+**Action:** When creating continuous animations (like rotating blurry blobs) using these expensive filters, always apply `will-change: transform` (or Tailwind's `will-change-transform`) to the element. This forces the browser to promote the element to a dedicated hardware-accelerated compositor layer, completely bypassing the expensive layout and paint phases during the animation cycle.
