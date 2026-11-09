@@ -72,7 +72,8 @@ const Hero = memo(function Hero() {
         {/* Image/Avatar Section */}
         <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
           <div className="relative w-64 h-64 md:w-80 md:h-80">
-            <div className="absolute inset-0 bg-blue-600 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob"></div>
+            {/* Bolt: Added will-change-transform to force GPU compositing for the expensive blur and mix-blend-mode animation, reducing CPU/GPU repaint costs on every frame */}
+            <div className="absolute inset-0 bg-blue-600 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob will-change-transform"></div>
             
             {/* Fetch priority high for above-the-fold profile picture */}
             <img 
