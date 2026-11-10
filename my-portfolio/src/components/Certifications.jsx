@@ -23,15 +23,15 @@ const certifications = [
 // Bolt: Wrapped in React.memo() to prevent unnecessary re-renders when parent component updates
 const Certifications = memo(function Certifications() {
   return (
-    <div>
+    <section aria-labelledby="certifications-heading">
       {/* Font updated to perfectly match Skills, and underline removed */}
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center md:text-left">
+      <h2 id="certifications-heading" className="text-3xl font-bold text-gray-900 mb-8 text-center md:text-left">
         Certifications
       </h2>
 
-      <div className="grid grid-cols-1 gap-6">
+      <ul className="grid grid-cols-1 gap-6">
         {certifications.map((cert, index) => (
-          <div 
+          <li
             key={index} 
             className="group bg-white border border-gray-100 rounded-xl shadow-sm p-6 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:shadow-md focus-within:shadow-md transition-shadow"
           >
@@ -69,10 +69,10 @@ const Certifications = memo(function Certifications() {
                 View Details <span className="inline-block transition-transform duration-200 group-hover/link:translate-x-1 group-focus-visible/link:translate-x-1" aria-hidden="true">&rarr;</span>
               </a>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
-    </div>
+      </ul>
+    </section>
   );
 });
 

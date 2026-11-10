@@ -13,3 +13,6 @@
 ## 2024-11-09 - Remove Hover Effects on Static Tags
 **Learning:** Adding hover classes (like `hover:bg-gray-100`) to static, non-interactive elements (like technology tags) creates a "false affordance." Users expect these elements to be clickable links or buttons because they react to the mouse, leading to confusion when clicking does nothing.
 **Action:** Always ensure that hover and focus styles are exclusively reserved for genuinely interactive elements (links, buttons, inputs) to maintain clear interactive affordances.
+## 2026-11-10 - Semantic Lists for Grid Elements
+**Learning:** Using simple `div` tags to map repeating visual cards or grids fails to convey structure to screen readers. Users miss out on valuable context like "list, 3 items".
+**Action:** When designing a repeating grid of elements, ensure the container uses a `ul` or `ol` tag and individual mapped items use `li` tags to provide a semantic list structure and list metrics to screen readers.

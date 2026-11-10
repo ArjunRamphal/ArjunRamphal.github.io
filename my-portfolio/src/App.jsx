@@ -22,12 +22,12 @@ function App() {
       <Hero /> 
       
       {/* Skills & Certifications Section */}
-      <section className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12">
+      <div className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <Skills />
           <Certifications />
         </div>
-      </section>
+      </div>
 
       {/* Main Content Area (Projects) */}
       <main id="main-content" tabIndex={-1} className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12 scroll-mt-8 outline-none">
