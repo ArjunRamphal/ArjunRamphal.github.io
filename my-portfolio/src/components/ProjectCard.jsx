@@ -4,7 +4,7 @@ import React, { memo } from 'react';
 // Since ProjectCard receives a stable project object, this avoids rendering all cards if the parent updates.
 const ProjectCard = memo(function ProjectCard({ project }) {
   return (
-    <div className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl focus-within:shadow-2xl transition-shadow duration-300 flex flex-col h-full">
+    <li className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl focus-within:shadow-2xl transition-shadow duration-300 flex flex-col h-full">
       
       {/* Image Section */}
       <div className="h-48 overflow-hidden shrink-0">
@@ -51,7 +51,7 @@ const ProjectCard = memo(function ProjectCard({ project }) {
           View Code <span className="inline-block transition-transform duration-200 group-hover/btn:translate-x-1 group-focus-visible/btn:translate-x-1" aria-hidden="true">&rarr;</span>
         </a>
       </div>
-    </div>
+    </li>
   );
 });
 

@@ -19,15 +19,15 @@ const skills = [
 // Bolt: Wrapped in React.memo() to prevent unnecessary re-renders when parent component updates
 const Skills = memo(function Skills() {
   return (
-    <div>
+    <section aria-labelledby="skills-heading">
       {/* Font updated to match */}
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center md:text-left">
+      <h2 id="skills-heading" className="text-3xl font-bold text-gray-900 mb-8 text-center md:text-left">
         Technical Skills
       </h2>
       
-      <div className="grid grid-cols-1 gap-6">
+      <ul className="grid grid-cols-1 gap-6">
         {skills.map((skillGroup) => (
-          <div key={skillGroup.category} className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <li key={skillGroup.category} className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
             <h3 className="text-xl font-semibold text-blue-700 mb-4 border-b-2 border-blue-200 pb-2 inline-block">
               {skillGroup.category}
             </h3>
@@ -41,10 +41,10 @@ const Skills = memo(function Skills() {
                 </li>
               ))}
             </ul>
-          </div>
+          </li>
         ))}
-      </div>
-    </div>
+      </ul>
+    </section>
   );
 });
 
