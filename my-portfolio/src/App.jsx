@@ -6,6 +6,18 @@ import Certifications from './components/Certifications';
 // Lazy load the projects section to reduce initial bundle size
 const Projects = lazy(() => import('./components/Projects'));
 
+// Bolt: Moved static fallback JSX object outside of the App component to prevent it from being unnecessarily recreated in memory and triggering garbage collection on every render cycle.
+const projectsFallback = (
+  <div
+    className="h-64 flex flex-col items-center justify-center text-gray-500 gap-4"
+    role="status"
+    aria-live="polite"
+  >
+    <div className="w-10 h-10 border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin" aria-hidden="true"></div>
+    <span className="text-sm font-medium">Loading projects...</span>
+  </div>
+);
+
 function App() {
   return (
     <div className="min-h-screen bg-gray-50 relative">
@@ -36,16 +48,7 @@ function App() {
         </h2>
         
         {/* Grid of Projects (Code Split) */}
-        <Suspense fallback={
-          <div
-            className="h-64 flex flex-col items-center justify-center text-gray-500 gap-4"
-            role="status"
-            aria-live="polite"
-          >
-            <div className="w-10 h-10 border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin" aria-hidden="true"></div>
-            <span className="text-sm font-medium">Loading projects...</span>
-          </div>
-        }>
+        <Suspense fallback={projectsFallback}>
           <Projects />
         </Suspense>
       </main>
