@@ -1,12 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="motion-safe:scroll-smooth">
   <head>
     <meta charset="UTF-8" />
+    <!-- Establish early connection to Unsplash for LCP image -->
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <!-- Preload LCP background image to bypass JS execution delay -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop" fetchpriority="high" />
+    <!-- Preload profile picture to bypass JS execution delay -->
+    <link rel="preload" as="image" href="/assets/1727090543636-sLh7xTPz.jpg" fetchpriority="high" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Sentinel: Hardened CSP with base-uri, object-src, and form-action to mitigate injection risks, and upgrade-insecure-requests -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://images.unsplash.com; connect-src 'self' ws:; base-uri 'self'; object-src 'none'; form-action 'none'; upgrade-insecure-requests;" />
+    <!-- Sentinel: Referrer-Policy to prevent leaking sensitive paths to external domains -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>Arjun Ramphal | Portfolio</title>
-    <script type="module" crossorigin src="/assets/index-DZzywN42.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-nq2_By8q.css">
+    <script type="module" crossorigin src="/assets/index-B9l_cVwW.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B8nJmEi_.css">
   </head>
   <body>
     <div id="root"></div>
