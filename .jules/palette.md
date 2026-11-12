@@ -16,3 +16,6 @@
 ## 2026-11-10 - Semantic Lists for Grid Elements
 **Learning:** Using simple `div` tags to map repeating visual cards or grids fails to convey structure to screen readers. Users miss out on valuable context like "list, 3 items".
 **Action:** When designing a repeating grid of elements, ensure the container uses a `ul` or `ol` tag and individual mapped items use `li` tags to provide a semantic list structure and list metrics to screen readers.
+## 2026-11-12 - Skip to Content link main tag scope
+**Learning:** When using a `<main>` tag as the target for a "Skip to main content" link, the `<main>` tag must encapsulate all primary content on the page. If it is placed too far down the page (e.g., only wrapping the final section), the skip link will inadvertently bypass earlier primary content sections (like Skills and Certifications), making them harder to access for keyboard and screen reader users.
+**Action:** Always ensure the `<main id="main-content">` tag starts immediately after header/hero elements and encompasses all primary content sections, not just one specific layout grid.

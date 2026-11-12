@@ -33,24 +33,27 @@ function App() {
       {/* Hero Section (Intro & Avatar) */}
       <Hero /> 
       
-      {/* Skills & Certifications Section */}
-      <div className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <Skills />
-          <Certifications />
+      {/* Main Content Area (Skills, Certifications & Projects) */}
+      <main id="main-content" tabIndex={-1} className="outline-none">
+        {/* Skills & Certifications Section */}
+        <div className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <Skills />
+            <Certifications />
+          </div>
         </div>
-      </div>
 
-      {/* Main Content Area (Projects) */}
-      <main id="main-content" tabIndex={-1} className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12 scroll-mt-8 outline-none">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center md:text-left">
-          Featured Projects
-        </h2>
-        
-        {/* Grid of Projects (Code Split) */}
-        <Suspense fallback={projectsFallback}>
-          <Projects />
-        </Suspense>
+        {/* Projects Section */}
+        <div className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12 scroll-mt-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center md:text-left">
+            Featured Projects
+          </h2>
+
+          {/* Grid of Projects (Code Split) */}
+          <Suspense fallback={projectsFallback}>
+            <Projects />
+          </Suspense>
+        </div>
       </main>
 
       {/* Footer */}
