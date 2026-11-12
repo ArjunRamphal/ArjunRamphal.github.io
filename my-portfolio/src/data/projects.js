@@ -7,10 +7,13 @@ import bankNoteRecognition from '../images/bank_note.jpg';
 import cloudSecurityOntology from '../images/cloud_security.png';
 import labOptimizer from '../images/lab_optimizer.png';
 import humanActionRecognition from '../images/action_recognition.png';
+import soilMoistureDashboard from '../images/soil_moisture_dashboard.jpg';
 
 export const projects = [
-{
+  {
     title: "Stationery POS System",
+    startDate: "2025-02",
+    endDate: "2025-11",
     description: "A C# Point of Sale system designed to handle retail transactions, inventory, and user management.",
     tech: ["C#", ".NET", "SQL"],
     githubLink: "https://github.com/ArjunRamphal/DnD-Trading",
@@ -18,6 +21,8 @@ export const projects = [
   },
   {
     title: "DND Trading Website",
+    startDate: "2025-07",
+    endDate: "2025-11",
     description: "The official website component for DND Trading & General Supplies, complementing the Stationery POS system.",
     tech: ["HTML/CSS", "JavaScript", "C#", ".NET"], 
     githubLink: "https://github.com/ArjunRamphal/DNDWebsite",
@@ -25,6 +30,8 @@ export const projects = [
   },
   {
     title: "Visual Novel Roguelike",
+    startDate: "2025-02",
+    endDate: "2025-06",
     description: "A unique roguelike game built in C++ blending dungeon crawling with visual novel storytelling mechanics.",
     tech: ["C++", "SFML"],
     githubLink: "https://github.com/ArjunRamphal/Dungeon_Descent",
@@ -32,6 +39,10 @@ export const projects = [
   },
   {
     title: "Notely",
+    startDate: null,
+    endDate: null,
+    ongoing: true,
+    sortDate: "2026-01-12",
     description: "A streamlined Android note-taking application for organizing personal tasks and ideas.",
     tech: ["Kotlin", "Jetpack Compose"],
     githubLink: "https://github.com/ArjunRamphal/Notely",
@@ -39,6 +50,10 @@ export const projects = [
   },
   {
     title: "Bookly",
+    startDate: null,
+    endDate: null,
+    ongoing: true,
+    sortDate: "2026-01-15",
     description: "A digital library manager for Android to track book collections and reading progress.",
     tech: ["Kotlin", "Jetpack Compose"],
     githubLink: "https://github.com/ArjunRamphal/Bookly",
@@ -46,6 +61,8 @@ export const projects = [
   },
   {
     title: "SA Bank Note Recognition System",
+    startDate: "2026-05",
+    endDate: "2026-05",
     description: "An image processing system designed to recognize South African bank notes using dual structural and statistical strategies.",
     tech: ["Python", "Computer Vision", "Image Processing"],
     githubLink: "https://github.com/ArjunRamphal/COMP702Project",
@@ -53,6 +70,8 @@ export const projects = [
   },
   {
     title: "Cloud Security Ontology",
+    startDate: "2026-02",
+    endDate: "2026-06",
     description: "A formal knowledge model establishing a shared semantic vocabulary for automated reasoning engines.",
     tech: ["Protégé", "OWL RDF/XML", "Description Logic"],
     githubLink: "https://github.com/ArjunRamphal/CloudSecurityOntology",
@@ -60,6 +79,8 @@ export const projects = [
   },
   {
     title: "Campus Lab Space Optimizer",
+    startDate: "2026-02",
+    endDate: "2026-06",
     description: "A Python-based system utilizing a Greedy Algorithm and Hill Climbing Local Search to minimize unused university laboratory seats.",
     tech: ["Python", "Algorithms", "Local Search"],
     githubLink: "https://github.com/ArjunRamphal/CampusLabSpaceOptimizer",
@@ -67,9 +88,22 @@ export const projects = [
   },
   {
     title: "Human Action Recognition Pipeline",
+    startDate: "2026-02",
+    endDate: "2026-06",
     description: "A deep learning pipeline evaluating recurrent baselines and advanced sequence models for automated human action recognition.",
     tech: ["Python", "GRU/LSTM", "Vision Sequence Transformers"],
     githubLink: "https://github.com/ArjunRamphal/COMP703HumanActionRecognition",
     image: humanActionRecognition
+  },
+  {
+    title: "Soil Moisture Monitoring & Watering Guidance",
+    startDate: "2026-09",
+    endDate: "2026-11",
+    description: "A COMP717A group project connecting Arduino and Raspberry Pi to a Flask dashboard for live soil monitoring, dry-soil alerts, and learned water-quantity guidance for manual watering.",
+    tech: ["Python", "Flask", "SQLite", "Arduino", "Raspberry Pi"],
+    githubLink: "https://github.com/ArjunRamphal/garden-iot-watering-guidance",
+    image: soilMoistureDashboard,
+    imagePosition: "center",
+    imageFit: "contain"
   }
 ];

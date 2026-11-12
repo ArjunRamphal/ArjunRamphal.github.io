@@ -1,5 +1,13 @@
 import React, { memo } from 'react';
 
+const monthFormatter = new Intl.DateTimeFormat('en-ZA', {
+  month: 'short',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
+
+const formatMonth = (value) => monthFormatter.format(new Date(`${value}-01T00:00:00Z`));
+
 // Bolt: Added React.memo() to prevent unnecessary re-renders of list items.
 // Since ProjectCard receives a stable project object, this avoids rendering all cards if the parent updates.
 const ProjectCard = memo(function ProjectCard({ project }) {
@@ -15,6 +23,7 @@ const ProjectCard = memo(function ProjectCard({ project }) {
           aria-hidden="true"
           loading="lazy"
           decoding="async"
+          style={{ objectPosition: project.imagePosition, objectFit: project.imageFit }}
           className="w-full h-full object-cover group-hover:scale-105 group-focus-within:scale-105 transition-transform duration-500"
         />
       </div>
@@ -24,6 +33,24 @@ const ProjectCard = memo(function ProjectCard({ project }) {
         <h3 className="text-xl font-bold text-gray-800 mb-2">
           {project.title}
         </h3>
+        {(project.startDate || project.ongoing) && (
+          <dl aria-label="Project dates" className="mb-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-500">
+            {project.startDate && (
+              <div className="flex gap-1">
+                <dt className="font-medium text-gray-600">Start</dt>
+                <dd><time dateTime={project.startDate}>{formatMonth(project.startDate)}</time></dd>
+              </div>
+            )}
+            <div className="flex gap-1">
+              <dt className="font-medium text-gray-600">{project.startDate ? 'End' : 'Status'}</dt>
+              <dd>
+                {project.endDate
+                  ? <time dateTime={project.endDate}>{formatMonth(project.endDate)}</time>
+                  : 'Present'}
+              </dd>
+            </div>
+          </dl>
+        )}
         <p className="text-gray-600 text-sm mb-4">
           {project.description}
         </p>

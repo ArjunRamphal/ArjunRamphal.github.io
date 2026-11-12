@@ -46,4 +46,25 @@ describe('ProjectCard', () => {
     expect(link).toHaveAttribute('target', '_blank');
     expect(link).toHaveAttribute('rel', 'noopener noreferrer');
   });
+
+  it('shows start and end months with machine-readable dates', () => {
+    render(<ProjectCard project={{ ...mockProject, startDate: '2025-02', endDate: '2025-11' }} />);
+    expect(screen.getByText('Start')).toBeInTheDocument();
+    expect(screen.getByText('End')).toBeInTheDocument();
+    expect(screen.getByText('Feb 2025')).toHaveAttribute('datetime', '2025-02');
+    expect(screen.getByText('Nov 2025')).toHaveAttribute('datetime', '2025-11');
+  });
+
+  it('marks a project as ongoing when it has a start and no end date', () => {
+    render(<ProjectCard project={{ ...mockProject, startDate: '2026-01', endDate: null }} />);
+    expect(screen.getByText('Jan 2026')).toBeInTheDocument();
+    expect(screen.getByText('Present')).toBeInTheDocument();
+  });
+
+  it('shows Present without presenting a sorting date as a confirmed start', () => {
+    render(<ProjectCard project={{ ...mockProject, startDate: null, endDate: null, ongoing: true, sortDate: '2026-01-12' }} />);
+    expect(screen.getByText('Present')).toBeInTheDocument();
+    expect(screen.queryByText('Start')).not.toBeInTheDocument();
+    expect(screen.queryByText('Jan 2026')).not.toBeInTheDocument();
+  });
 });

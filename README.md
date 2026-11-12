@@ -22,3 +22,8 @@ This portfolio highlights several key projects contained in my GitHub:
 * **DND Trading Website:** A front-end web component for a retail business.
 * **Visual Novel Roguelike:** A C++/SFML game blending dungeon crawling with narrative.
 * **Notely & Bookly:** Modern Android applications built with Kotlin and Jetpack Compose.
+* **Soil Moisture Monitoring & Watering Guidance (COMP717A):** An IoT group project with Arduino, Raspberry Pi, and a Flask dashboard for live readings, dry-soil alerts, and water-quantity guidance for manual watering.
+
+Project cards show start and end months and include an oldest/newest sorting control. The default order is oldest to newest.
+
+Notely and Bookly are marked **Present**. Their first recorded source commits are used only for chronological placement when no start month has been supplied.
