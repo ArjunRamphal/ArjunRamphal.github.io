@@ -27,3 +27,9 @@ This portfolio highlights several key projects contained in my GitHub:
 Project cards show start and end months and include an oldest/newest sorting control. The default order is oldest to newest.
 
 Notely and Bookly are marked **Present**. Their first recorded source commits are used only for chronological placement when no start month has been supplied.
+
+## Image credits
+
+The Human Action Recognition card uses six real sample frames from the [KTH Human Action Database](https://www.csc.kth.se/cvap/actions/), arranged in a labelled 3×2 grid. The labels identify dataset classes, rather than new model predictions.
+
+Dataset reference: Christian Schuldt, Ivan Laptev and Barbara Caputo, *Recognizing Human Actions: A Local SVM Approach*, ICPR 2004. KTH provides the dataset for non-commercial use. Frame source URLs and timestamps are retained in the SVG metadata.

@@ -6,7 +6,7 @@ import bookly from '../images/bookly.jpg';
 import bankNoteRecognition from '../images/bank_note.jpg';
 import cloudSecurityOntology from '../images/cloud_security.png';
 import labOptimizer from '../images/lab_optimizer.png';
-import humanActionRecognition from '../images/action_recognition.png';
+import humanActionRecognition from '../images/action_recognition.svg';
 import soilMoistureDashboard from '../images/soil_moisture_dashboard.jpg';
 
 export const projects = [
@@ -93,7 +93,9 @@ export const projects = [
     description: "A deep learning pipeline evaluating recurrent baselines and advanced sequence models for automated human action recognition.",
     tech: ["Python", "GRU/LSTM", "Vision Sequence Transformers"],
     githubLink: "https://github.com/ArjunRamphal/COMP703HumanActionRecognition",
-    image: humanActionRecognition
+    image: humanActionRecognition,
+    imagePosition: "center",
+    imageFit: "contain"
   },
   {
     title: "Soil Moisture Monitoring & Watering Guidance",
