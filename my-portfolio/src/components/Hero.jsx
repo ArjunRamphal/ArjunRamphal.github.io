@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import profilePic from '../images/1727090543636.jpg';
+import CvChooser from './CvChooser';
 
 // Bolt: Wrapped in React.memo() to prevent unnecessary re-renders when parent component updates
 const Hero = memo(function Hero() {
@@ -35,8 +36,8 @@ const Hero = memo(function Hero() {
             Currently building tools with C#, .NET, and exploring ethical hacking.
           </p>
           
-          {/* Social Buttons */}
-          <div className="flex justify-center md:justify-start gap-4">
+          {/* Profile links and CV */}
+          <div className="flex flex-wrap justify-center md:justify-start gap-4">
             
             {/* GitHub Button with Icon */}
             <a 
@@ -65,6 +66,8 @@ const Hero = memo(function Hero() {
               </svg>
               LinkedIn
             </a>
+
+            <CvChooser />
 
           </div>
         </div>
