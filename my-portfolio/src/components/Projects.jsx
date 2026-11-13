@@ -15,19 +15,24 @@ const Projects = memo(function Projects() {
 
   return (
     <>
-      <div className="mb-6 flex flex-wrap items-center justify-end gap-3">
-        <label htmlFor="project-sort" className="text-sm font-medium text-gray-700">
-          Sort projects
-        </label>
-        <select
-          id="project-sort"
-          value={sortOrder}
-          onChange={(event) => setSortOrder(event.target.value)}
-          className="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
-        >
-          <option value="oldest">Oldest to newest</option>
-          <option value="newest">Newest to oldest</option>
-        </select>
+      <div className="mb-8 flex flex-col items-center gap-4 md:flex-row md:justify-between">
+        <h2 className="text-3xl font-bold text-gray-900 text-center md:text-left">
+          Featured Projects
+        </h2>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <label htmlFor="project-sort" className="text-sm font-medium text-gray-700">
+            Sort projects
+          </label>
+          <select
+            id="project-sort"
+            value={sortOrder}
+            onChange={(event) => setSortOrder(event.target.value)}
+            className="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+          >
+            <option value="oldest">Oldest to newest</option>
+            <option value="newest">Newest to oldest</option>
+          </select>
+        </div>
       </div>
       <p role="status" className="sr-only">
         Projects sorted {sortOrder === 'oldest' ? 'oldest to newest' : 'newest to oldest'}.

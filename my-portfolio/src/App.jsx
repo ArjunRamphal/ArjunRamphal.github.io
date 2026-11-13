@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import Hero from './components/Hero';
+import Education from './components/Education';
 import Skills from './components/Skills';
 import Certifications from './components/Certifications';
 
@@ -8,14 +9,19 @@ const Projects = lazy(() => import('./components/Projects'));
 
 // Bolt: Moved static fallback JSX object outside of the App component to prevent it from being unnecessarily recreated in memory and triggering garbage collection on every render cycle.
 const projectsFallback = (
-  <div
-    className="h-64 flex flex-col items-center justify-center text-gray-500 gap-4"
-    role="status"
-    aria-live="polite"
-  >
-    <div className="w-10 h-10 border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin" aria-hidden="true"></div>
-    <span className="text-sm font-medium">Loading projects...</span>
-  </div>
+  <>
+    <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center md:text-left">
+      Featured Projects
+    </h2>
+    <div
+      className="h-64 flex flex-col items-center justify-center text-gray-500 gap-4"
+      role="status"
+      aria-live="polite"
+    >
+      <div className="w-10 h-10 border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin" aria-hidden="true"></div>
+      <span className="text-sm font-medium">Loading projects...</span>
+    </div>
+  </>
 );
 
 function App() {
@@ -33,8 +39,10 @@ function App() {
       {/* Hero Section (Intro & Avatar) */}
       <Hero /> 
       
-      {/* Main Content Area (Skills, Certifications & Projects) */}
+      {/* Main Content Area */}
       <main id="main-content" tabIndex={-1} className="outline-none">
+        <Education />
+
         {/* Skills & Certifications Section */}
         <div className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -45,10 +53,6 @@ function App() {
 
         {/* Projects Section */}
         <div className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12 scroll-mt-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center md:text-left">
-            Featured Projects
-          </h2>
-
           {/* Grid of Projects (Code Split) */}
           <Suspense fallback={projectsFallback}>
             <Projects />

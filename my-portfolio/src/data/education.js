@@ -1,0 +1,26 @@
+export const education = [
+  {
+    id: 'honours',
+    level: 'Postgraduate',
+    qualification: 'BSc Honours in Computer Science',
+    institution: 'University of KwaZulu-Natal',
+    location: 'Durban, South Africa',
+    startYear: 2026,
+    endYear: 2026,
+    summary: 'Advanced study and projects in machine learning, computer vision, optimisation, ontologies and the Internet of Things.',
+    recognition: ['Certificate of Merit', 'Academic scholarship recipient'],
+  },
+  {
+    id: 'bachelors',
+    level: 'Undergraduate',
+    qualification: 'BSc in Computer Science and Information Technology',
+    institution: 'University of KwaZulu-Natal',
+    location: 'Durban, South Africa',
+    startYear: 2023,
+    endYear: 2025,
+    status: 'Summa Cum Laude',
+    statusTone: 'blue',
+    summary: 'A foundation in software development, algorithms, databases, computer systems and networking.',
+    recognition: ['4x Dean’s Commendation', 'Certificate of Merit', 'Academic scholarship recipient'],
+  },
+];
