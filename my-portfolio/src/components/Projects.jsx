@@ -1,10 +1,12 @@
 import React, { memo, useMemo, useState } from 'react';
 import ProjectCard from './ProjectCard';
 import { projects } from '../data/projects';
+import ProjectDetails from './ProjectDetails';
 
 // Bolt: Wrapped in React.memo() to prevent unnecessary re-renders when parent component updates
 const Projects = memo(function Projects() {
   const [sortOrder, setSortOrder] = useState('oldest');
+  const [selectedProject, setSelectedProject] = useState(null);
   const sortedProjects = useMemo(() => {
     const ordered = [...projects].sort((a, b) => {
       const startOrder = (a.startDate || a.sortDate || '9999-12').localeCompare(b.startDate || b.sortDate || '9999-12');
@@ -17,7 +19,7 @@ const Projects = memo(function Projects() {
     <>
       <div className="mb-8 flex flex-col items-center gap-4 md:flex-row md:justify-between">
         <h2 className="text-3xl font-bold text-gray-900 text-center md:text-left">
-          Featured Projects
+          Projects
         </h2>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <label htmlFor="project-sort" className="text-sm font-medium text-gray-700">
@@ -39,9 +41,10 @@ const Projects = memo(function Projects() {
       </p>
       <ul aria-label="Projects list" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {sortedProjects.map((project) => (
-          <ProjectCard key={project.title} project={project} />
+          <ProjectCard key={project.id || project.title} project={project} onViewDetails={setSelectedProject} />
         ))}
       </ul>
+      <ProjectDetails project={selectedProject} onClose={() => setSelectedProject(null)} />
     </>
   );
 });

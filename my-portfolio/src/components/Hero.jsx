@@ -6,6 +6,7 @@ import CvChooser from './CvChooser';
 const Hero = memo(function Hero() {
   return (
     <section 
+      id="top"
       className="relative text-white py-20"
     >
       {/* The Background Image & Overlay */}
@@ -29,11 +30,10 @@ const Hero = memo(function Hero() {
             Hi, I'm Arjun.
           </h1>
           <p className="text-xl md:text-2xl text-blue-200 mb-8 font-medium">
-            Computer Science Student • Cybersecurity & Networks
+            Computer Science Graduate
           </p>
           <p className="text-gray-300 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
-            Passionate about network security, secure infrastructure, and backend development. 
-            Currently building tools with C#, .NET, and exploring ethical hacking.
+            I build practical software with C#, Python and Kotlin, from business systems and Android apps to AI and connected devices. My interests span software development, machine learning and cybersecurity.
           </p>
           
           {/* Profile links and CV */}

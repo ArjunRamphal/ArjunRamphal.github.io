@@ -16,7 +16,7 @@ function GraduationCap() {
 
 const Education = memo(function Education() {
   return (
-    <section id="education" aria-labelledby="education-heading" className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12 scroll-mt-8">
+    <section id="education" aria-labelledby="education-heading" className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12 scroll-mt-16">
       <h2 id="education-heading" className="text-3xl font-bold text-gray-900 mb-8 text-center md:text-left">
         Education
       </h2>

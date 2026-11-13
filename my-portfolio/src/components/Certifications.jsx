@@ -23,7 +23,7 @@ const certifications = [
 // Bolt: Wrapped in React.memo() to prevent unnecessary re-renders when parent component updates
 const Certifications = memo(function Certifications() {
   return (
-    <section aria-labelledby="certifications-heading">
+    <section id="certifications" aria-labelledby="certifications-heading" className="scroll-mt-28">
       {/* Font updated to perfectly match Skills, and underline removed */}
       <h2 id="certifications-heading" className="text-3xl font-bold text-gray-900 mb-8 text-center md:text-left">
         Certifications

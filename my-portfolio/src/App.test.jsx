@@ -8,9 +8,9 @@ describe('App Component', () => {
     render(<App />);
   });
 
-  it('renders Featured Projects section', () => {
+  it('renders the Projects section', () => {
     render(<App />);
-    expect(screen.getByText('Featured Projects')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Projects', level: 2 })).toBeInTheDocument();
   });
 
   it('renders the footer string', () => {

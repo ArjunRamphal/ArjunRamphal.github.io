@@ -3,6 +3,8 @@ import Hero from './components/Hero';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import Certifications from './components/Certifications';
+import Navigation from './components/Navigation';
+import Contact from './components/Contact';
 
 // Lazy load the projects section to reduce initial bundle size
 const Projects = lazy(() => import('./components/Projects'));
@@ -11,7 +13,7 @@ const Projects = lazy(() => import('./components/Projects'));
 const projectsFallback = (
   <>
     <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center md:text-left">
-      Featured Projects
+      Projects
     </h2>
     <div
       className="h-64 flex flex-col items-center justify-center text-gray-500 gap-4"
@@ -36,28 +38,32 @@ function App() {
         Skip to main content
       </a>
 
+      <Navigation />
+
       {/* Hero Section (Intro & Avatar) */}
       <Hero /> 
       
       {/* Main Content Area */}
       <main id="main-content" tabIndex={-1} className="outline-none">
-        <Education />
-
-        {/* Skills & Certifications Section */}
-        <div className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <Skills />
-            <Certifications />
-          </div>
-        </div>
-
         {/* Projects Section */}
-        <div className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12 scroll-mt-8">
+        <section id="projects" aria-label="Projects" className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12 scroll-mt-16">
           {/* Grid of Projects (Code Split) */}
           <Suspense fallback={projectsFallback}>
             <Projects />
           </Suspense>
+        </section>
+
+        <Education />
+
+        {/* Skills & Certifications Section */}
+        <div className="max-w-[1600px] mx-auto py-12 px-4 sm:px-6 lg:px-12">
+          <div className="grid grid-cols-1 xl:grid-cols-5 gap-12">
+            <div className="xl:col-span-3"><Skills /></div>
+            <div className="xl:col-span-2"><Certifications /></div>
+          </div>
         </div>
+
+        <Contact />
       </main>
 
       {/* Footer */}
