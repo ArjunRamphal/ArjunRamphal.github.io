@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="background" x2="1" y2="1"><stop stop-color="#0f172a"/><stop offset="1" stop-color="#172e55"/></linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0H0V60" fill="none" stroke="#93c5fd" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#background)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <g fill="none" stroke="#60a5fa" stroke-opacity=".12"><circle cx="1100" cy="570" r="200"/><circle cx="1100" cy="570" r="280"/><circle cx="1100" cy="570" r="360"/></g>
+  <g font-family="DejaVu Sans, sans-serif">
+    <rect x="88" y="74" width="64" height="64" rx="16" fill="#1d4ed8"/>
+    <text x="120" y="115" text-anchor="middle" font-size="25" font-weight="700" fill="#fff">AR</text>
+    <text x="1112" y="115" text-anchor="end" font-size="20" fill="#bfdbfe">Portfolio</text>
+    <text x="88" y="231" font-size="20" font-weight="700" letter-spacing="4" fill="#93c5fd">COMPUTER SCIENCE GRADUATE</text>
+    <text x="88" y="333" font-size="84" font-weight="700" fill="#fff">Arjun Ramphal</text>
+    <text x="88" y="397" font-size="29" fill="#dbeafe">Software development · AI · Cybersecurity</text>
+    <rect x="88" y="447" width="180" height="4" rx="2" fill="#60a5fa"/>
+    <text x="88" y="549" font-size="22" fill="#bfdbfe">arjunramphal.github.io</text>
+  </g>
+</svg>
